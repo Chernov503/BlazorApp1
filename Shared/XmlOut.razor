@@ -1,0 +1,75 @@
+﻿<h1>XMLOut</h1>
+
+@foreach (var item in e.eChilds)
+{
+    <table>
+        <tbody>
+            <tr>
+                <td style ="border: 1px solid black;">@item.e.Name</td>
+            </tr>
+            <tr>
+                @foreach (var el in item.a)
+                {
+
+                    <td style="border: 1px solid black;padding-left: 50px">@el.Name</td>
+                    <td style="border: 1px solid black;">@el.Value</td>
+
+                    @*                     <td style="padding-top: 10px;">@el.Name</td>
+            <td style="padding-top: 10px;">@el.Value</td> *@
+                }
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <tbody>
+            @foreach (var el in item.eChilds)
+            {
+
+                <tr>
+
+                    <td style="border: 1px solid black; padding-left: 100px;">@el.e.Name</td>
+
+                    @if (el.e.Value != "")
+                    {
+                        <td style="border: 1px solid black;">@el.e.Value</td>
+                    }
+
+                    @foreach (var el1 in el.a)
+                    {
+                        <td style="border: 1px solid black;">@el1.Name</td>
+                        <td style="border: 1px solid black;">@el1.Value</td>
+                    }
+
+                </tr>
+
+                @foreach (var el1 in el.eChilds)
+                {
+                    <tr>
+
+                        <td style="border: 1px solid black; padding-left: 150px">@el1.e.Name</td>
+                        @if (el1.e.Value != "")
+                        {
+                            <td style="border: 1px solid black;">@el1.e.Value</td>
+                        }
+
+                        @foreach (var el2 in el1.a)
+                        {
+                            <td style="border: 1px solid black; ">@el2.Name</td>
+                            <td style="border: 1px solid black;">@el2.Value</td>
+                        }
+
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+}
+
+
+@code {
+    static XDocument doc = XDocument.Load("xmldoc.xml");
+    
+    [Parameter]
+    public XMLReader e { get; set; } = new XMLReader(doc.Root);
+}

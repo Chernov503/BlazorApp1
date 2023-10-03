@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<result template="Passport_RU">
+	<field name="Фамилия">
+		<value>ЛЕПП</value>
+		<symbols>
+			<symbol char="Л" trusted="true"/>
+			<symbol char="Е" trusted="true"/>
+			<symbol char="П" trusted="true"/>
+			<symbol char="П" trusted="true"/>
+		</symbols>
+	</field>
+	<field name="Имя">
+		<value>ЕКАТЕРИНА</value>
+		<symbols>
+			<symbol char="Е" trusted="true"/>
+			<symbol char="К" trusted="true"/>
+			<symbol char="А" trusted="true"/>
+			<symbol char="Т" trusted="true"/>
+			<symbol char="Е" trusted="true"/>
+			<symbol char="Р" trusted="true"/>
+			<symbol char="И" trusted="true"/>
+			<symbol char="Н" trusted="true"/>
+			<symbol char="А" trusted="true"/>
+		</symbols>
+	</field>
+	<field name="Отчество">
+		<value>АЛЕКСАНДРОВНА</value>
+		<symbols>
+			<symbol char="А" trusted="false"/>
+			<symbol char="Л" trusted="true"/>
+			<symbol char="Е" trusted="true"/>
+			<symbol char="К" trusted="true"/>
+			<symbol char="С" trusted="true"/>
+			<symbol char="А" trusted="true"/>
+			<symbol char="Н" trusted="true"/>
+			<symbol char="Д" trusted="false"/>
+			<symbol char="Р" trusted="true"/>
+			<symbol char="О" trusted="true"/>
+			<symbol char="В" trusted="true"/>
+			<symbol char="Н" trusted="true"/>
+			<symbol char="А" trusted="true"/>
+		</symbols>
+	</field>
+	<field name="Пол">
+		<value>ЖЕН</value>
+		<symbols>
+			<symbol char="Ж" trusted="true"/>
+			<symbol char="Е" trusted="true"/>
+			<symbol char="Н" trusted="true"/>
+		</symbols>
+	</field>
+</result>
